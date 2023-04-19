@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mail;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -41,8 +40,8 @@ namespace DataStructure
         }
 
         public LinkedList<T> List { get { return list; } } // 프로퍼티로 읽기 전용으로 만들어줌
-        public LinkedListNode<T> Prev { get { return prev; } } // 프로퍼티
-        public LinkedListNode<T> Next { get { return next; } } // 프로퍼티
+        public LinkedListNode<T> Prev { get { return prev; } } // 프로퍼티로 읽기 전용으로 만들어줌
+        public LinkedListNode<T> Next { get { return next; } } // 프로퍼티로 읽기 전용으로 만들어줌
 
         public T Item { get { return item; } set { item = value; } }
     }
@@ -80,7 +79,7 @@ namespace DataStructure
             newNode.next = node;
             newNode.prev = node.prev;
             node.prev.next = newNode;
-            if (node.prev !=  null)
+            if (node.prev != null)
                 node.prev.next = newNode;
 
             // 3. 갯수 증가
@@ -88,7 +87,17 @@ namespace DataStructure
             return newNode;
         }
 
-            public LinkedListNode<T> AddFirst(T value)
+        public LinkedListNode<T> AddAfter(LinkedListNode<T> node, T value)
+        {
+            ValidateNode(node);
+            LinkedListNode<T> newNode = new LinkedListNode<T>(this, value);
+            InsertNodeAfter(node, newNode);
+            if (node == tail)
+                tail = newNode;
+            return newNode;
+        }
+
+        public LinkedListNode<T> AddFirst(T value)
         {
             // 1. 새로운 노드 생성
             LinkedListNode<T> newNode = new LinkedListNode<T>(this, value);
@@ -113,26 +122,74 @@ namespace DataStructure
             return newNode;
         }
 
-        public LinkedListNode<T> AddAfter(LinkedListNode<T> node, T value)
-        {
-            LinkedListNode<T> newNode = new LinkedListNode<T>(this, value);
-            if (node == tail)
-                tail = newNode;
-            return newNode;
-        }
-
         public LinkedListNode<T> AddLast(T value)
         {
             LinkedListNode<T> newNode = new LinkedListNode<T>(this, value);
             if (tail != null)
             {
+                InsertNodeAfter(tail, newNode);
                 tail = newNode;
+            }
+            else
+            {
+                InsertNodeToEmptyList(newNode);
             }
             return newNode;
         }
 
-        /* Linked List<T>.Remove 메서드
-        -> LinkedList<T> 에서 노드 또는 값의 첫 번째 항목을 제거 */
+        public void Clear()
+        {
+            head = null;
+            tail = null;
+            count = 0;
+        }
+
+        public bool Contains(T value)
+        {
+            return Find(value) != null;
+        }
+
+        public LinkedListNode<T> Find(T value)
+        {
+            LinkedListNode<T>? node = head;
+            EqualityComparer<T> c = EqualityComparer<T>.Default;
+            if (value != null)
+            {
+                while (node != null)
+                {
+                    if (c.Equals(node.Item, value))
+                        return node;
+                    else
+                        node = node.next;
+                }
+            }
+            else
+            {
+                while (node != null)
+                {
+                    if (node.Item == null)
+                        return node;
+                    else
+                        node = node.next;
+                }
+            }
+            return null;
+        }
+
+        public bool Remove(T value)
+        {
+            LinkedListNode<T>? node = Find(value); // = 찾기
+            if (node != null)
+            {
+                Remove(node);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void Remove(LinkedListNode<T> node)
         {
             // 예외1 : 노드가 연결리스트에 포함된 노드가 아닌 경우 
@@ -158,46 +215,77 @@ namespace DataStructure
             count--;
         }
 
-        public bool Remove(T value)
-        { 
-            LinkedListNode<T> findNode = Find(value); // = 찾기
-            if (findNode != null)
-            {
-                Remove(findNode);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+        public void RemoveFirst()
+        {
+            if (head == null)
+                throw new InvalidOperationException();
+
+            LinkedListNode<T> headNode = head;
+            Remove(headNode);
         }
 
-        public LinkedListNode<T> Find(T value)
+        public void RemoveLast()
         {
-            LinkedListNode<T>? target = head;
-            EqualityComparer<T> comparer = EqualityComparer<T>.Default;
-            if (value != null)
-            {
-                while (target != null)
-                {
-                    if (comparer.Equals(target.Item, value))
-                        return target;
-                    else
-                        target = target.next;
-                }
-            }
-            else
-            {
-                while (target != null)
-                {
-                    if (target.Item == null)
-                        return target;
-                    else
-                        target = target.next;
-                }
-            }
-            return null;       
+            if (tail == null)
+                throw new InvalidOperationException();
+
+            LinkedListNode<T> tailNode = tail;
+            Remove(tailNode);
         }
-        
+
+        private void ValidateNode(LinkedListNode<T> node)
+        {
+            if (node == null)
+                throw new ArgumentNullException();
+            if (node.list != this)
+                throw new InvalidOperationException();
+        }
+
+        private void InsertNodeBefore(LinkedListNode<T> node, LinkedListNode<T> newNode)
+        {
+            newNode.next = node;
+            newNode.prev = node.prev;
+            if (newNode.prev != null)
+                newNode.prev.next = newNode;
+
+            node.prev = newNode;
+
+            count++;
+        }
+
+        private void InsertNodeAfter(LinkedListNode<T> node, LinkedListNode<T> newNode)
+        {
+            newNode.prev = node;
+            newNode.next = node.next;
+            if (newNode.next != null)
+                newNode.next.prev = newNode;
+
+            node.next = newNode;
+
+            count++;
+        }
+
+        private void InsertNodeToEmptyList(LinkedListNode<T> newNode)
+        {
+            if (count != 0)
+                throw new InvalidOperationException();
+
+            head = newNode;
+            tail = newNode;
+            count++;
+        }
+
+        private void RemoveNode(LinkedListNode<T> node)
+        {
+            if (node.list != this)
+                throw new InvalidOperationException();
+
+            if (node.prev != null)
+                node.prev.next = node.next;
+            if (node.next != null)
+                node.next.prev = node.prev;
+
+            count--;
+        }
     }
 }

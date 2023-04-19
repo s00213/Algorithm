@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. List", "01. List\01. Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-1. CSharp List", "01-1. CSharp List\01-1. CSharp List.csproj", "{D7BFF5D7-1BC9-49F7-9FCC-3CA7040001B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. LinkedList", "02. LinkedList\02. LinkedList.csproj", "{CC394A5F-CE5B-43C7-8B85-DC6E43BEAB8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. LinkedList", "02. LinkedList\02. LinkedList.csproj", "{CC394A5F-CE5B-43C7-8B85-DC6E43BEAB8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-1. CSharp LinkedList", "02-1. CSharp LinkedList\02-1. CSharp LinkedList.csproj", "{2D9AC6BD-4868-4AD0-A377-2F0F36897C36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CC394A5F-CE5B-43C7-8B85-DC6E43BEAB8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC394A5F-CE5B-43C7-8B85-DC6E43BEAB8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC394A5F-CE5B-43C7-8B85-DC6E43BEAB8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D9AC6BD-4868-4AD0-A377-2F0F36897C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D9AC6BD-4868-4AD0-A377-2F0F36897C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D9AC6BD-4868-4AD0-A377-2F0F36897C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D9AC6BD-4868-4AD0-A377-2F0F36897C36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

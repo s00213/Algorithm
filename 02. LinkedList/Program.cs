@@ -47,7 +47,30 @@
 
         static void Main(string[] args)
         {
-            // 강의 듣기!
+            DataStructure.LinkedList<string> linkedList = new DataStructure.LinkedList<string>();
+
+            // 링크드리스트 요소 삽입
+            linkedList.AddFirst("0번 앞데이터");
+            linkedList.AddFirst("1번 앞데이터");
+            linkedList.AddLast("0번 뒤데이터");
+            linkedList.AddLast("1번 뒤데이터");
+
+            // 링크드리스트 요소 삭제
+            linkedList.Remove("1번 앞데이터");
+
+            // 링크드리스트 요소 탐색
+            DataStructure.LinkedListNode<string> findNode = linkedList.Find("0번 뒤데이터");
+
+            // 링크드리스트 노드를 통한 노드 참조
+            DataStructure.LinkedListNode<string> prevNode = findNode.Prev;
+            DataStructure.LinkedListNode<string> nextNode = findNode.Next;
+
+            // 링크드리스트 노드를 통한 노드 삽입
+            linkedList.AddBefore(findNode, "찾은노드 앞데이터");
+            linkedList.AddAfter(findNode, "찾은노드 뒤데이터");
+
+            // 링크드리스트 노드를 통한 삭제
+            linkedList.Remove(findNode);
         }
     }
 }
