@@ -80,7 +80,7 @@ namespace _00._Algorithm
         // n = 1000		    1	     1000	1,000,000
         // Big-O		 O(1)	     O(n)	   O(n^2)
 
-        // 0(1) > 0(logn) > 0(n) > 0(nlogn) > O(n^2) > 0(n^3) > 0(2^n)
+        // 0(1) > 0(logn) > 0(n) > 0(nlogn) > O(n^2) > 0(n^3) > 0(2^n) > 0(n!)
         // https://bangu4.tistory.com/202 시간복잡도 성능지표
         static void Main(string[] args)
         {

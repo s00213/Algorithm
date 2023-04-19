@@ -1,4 +1,12 @@
-﻿namespace CSharp_List
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSharp_List
 {
     public class Program
     {
@@ -37,7 +45,7 @@
             fruits.Remove("Kiwi");
 
             // 배열 요소 탐색
-            string? findValue = fruits.find(x => x.constains('1'));
+            string? findValue = fruits.Find(x => x.Contains('1'));
             int findIndex = fruits.FindIndex(x => x.Contains('4'));
         }
 

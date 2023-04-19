@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00. Algorithm", "00. Algori
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. List", "01. List\01. List\01. List.csproj", "{184C8F03-D257-472A-B8F4-0E6C0D5A2D57}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp List", "CSharp List\CSharp List.csproj", "{6391A4D9-79CC-4232-8961-FA1E730C8281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "-1. CSharp List", "CSharp List\-1. CSharp List.csproj", "{6391A4D9-79CC-4232-8961-FA1E730C8281}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

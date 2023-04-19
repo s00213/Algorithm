@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace _01._List
 {
-    internal class List<M>
+    internal class List<T>
     /* List<T> 클래스
      -> 인덱스로 액세스할 수 있는 강력한 형식의 개체 목록을 나타냅니다. 목록의 검색, 정렬 및 조작에 사용할 수 있는 메서드를 제공함 */
     {
         private const int DefaultCapacity = 4;
 
-        private M[] items;
-        private int size;
+        private T[] items;
+        private int size; // 가지고 있는 개수
 
         public List()
         {
-            items = new M[DefaultCapacity];
+            items = new T[DefaultCapacity];
             size = 0;
         }
 
@@ -30,7 +30,7 @@ namespace _01._List
         /* List<T>.Count
         -> List<T>에 포함된 요소 수를 가져옴 */
 
-        public M this[int index]
+        public T this[int index]
         /* this 키워드
         -> 클래스 또는 구조체에서 인덱서를 선언 시 사용함 */
         {
@@ -53,9 +53,10 @@ namespace _01._List
 
                 items[index] = value;
             }
-        }
+            //public int a { get; set; }
 
-        public void Add(M item)
+        }
+        public void Add(T item)
         /* List<T>.Add(T) 메서드
         -> 개체를 List<T>의 끝 부분에 추가 */
         {
@@ -68,13 +69,13 @@ namespace _01._List
         public void Grow() // Grow로 3배짜리 저장소 만들어줌
         {
             int newCapacity = items.Length * 3;
-            M[] newItems = new M[newCapacity]; // newItems의 새로운 배열을 만들어줌
+            T[] newItems = new T[newCapacity]; // newItems의 새로운 배열을 만들어줌
             Array.Copy(items, 0, newItems, 0, size);
             items = newItems; // 이전 배열을 담고 있던 items를 새로운 더 큰 배열 newItems
         }
 
-        public M? Find(Predicate<M> match)
-        /*List<T>.Find(Predicate<T>) 메서드
+        public T? Find(Predicate<T> match)
+        /* List<T>.Find(Predicate<T>) 메서드
          -> 지정된 조건자에 정의된 조건과 일치하는 요소를 검색하고 전체 List<T>에서 처음으로 검색한 요소를 반환함 */
         {
             if (match == null) throw new ArgumentNullException();
@@ -86,17 +87,21 @@ namespace _01._List
                     return items[i];
             }
 
-            return default(M);
+            return default(T);
         }
 
-        public int FindIndex(Predicate<M> match)
-        /*FindIndexList<T>.FindIndex 메서드
+        public int FindIndex(Predicate<T> match)
+        /* FindIndexList<T>.FindIndex 메서드
          -> 지정된 조건자에 정의된 조건과 일치하는 요소를 검색하고 List<T>이나 그 일부에서 처음으로 검색한 요소의 인덱스(0부터 시작)를 반환함 */
+        
+         /* Predicate<T> 대리자
+         -> 조건 집합을 정의하고 지정된 개체가 이러한 조건을 충족하는지 여부를 확인하는 메서드
+         -> 일반적으로 대리자는 Predicate<T> 람다 식으로 표시 */
         {
             return FindIndex(0, size, match);
         }
 
-        public int FindIndex(int startIndex, int count, Predicate<M> match)
+        public int FindIndex(int startIndex, int count, Predicate<T> match)
         {
             if (startIndex > size)
                 throw new ArgumentOutOfRangeException();
@@ -115,14 +120,14 @@ namespace _01._List
             return -1;
         }
 
-        public int IndexOf(M item)
+        public int IndexOf(T item)
         /*List<T>.Index Of 메서드
          -> List<T> 또는 그 일부에서 처음 나타나는 값의 0부터 시작하는 인덱스를 반환함 */
         {
             return Array.IndexOf(items, item, 0, size);
         }
 
-        public bool Remove(M item)
+        public bool Remove(T item)
         /* List<T>.Remove(T) 메서드
         -> List<T> 에서 특정 개체의 첫 번째 항목을 제거
         -> public bool Remove (T item); 
