@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSharp_List
+﻿namespace CSharp_List
 {
     public class Program
     {
@@ -60,10 +52,8 @@ namespace CSharp_List
         -> 하나의 자료 뒤에 다수의 자료가 올 수 있는 형태
         -> 종류: 트리, 그래프
 
-
         선형자료구조 : 배열, 동적배열, 연결리스트
-           
-        
+              
          /* 배열 (Array)
          int[] intArray = new int[100];
          -> 연속적인 메모리상에 동일한 타입의 요소를 일렬로 저장하는 자료구조
@@ -81,7 +71,6 @@ namespace CSharp_List
          -> 연속되지 않은 공간 사용
          -> 중간 추가 또는 삭제가 가능함
          -> n번째 공간을 바로 찾을 수 없음(임의 접근 Random Access 불가) */
-
 
 
         // 0. 이 외 더 필요한 구현현들 시도
