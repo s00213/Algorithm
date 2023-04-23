@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _04._Stack
+namespace _04_1._CSharp_Stack_05_1._Queue
 {
+    // 1.
+    // 스택(어댑터) 구현
+    // + 주석 꼭 달아줘
     public class Stack<T>
     {
         private const int DefaultCapacity = 4;
@@ -93,7 +96,7 @@ namespace _04._Stack
             return Count == 0; // 스택이 비어있는지 여부를 반환
         }
 
-        private bool IsFull() 
+        private bool IsFull()
         {
             return Count == array.Length; // 스택이 가득 차있는지 여부를 반환
         }

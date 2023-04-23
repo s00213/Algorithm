@@ -15,13 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-1. CSharp LinkedList", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Iterator", "03. Iterator\03. Iterator.csproj", "{FA5562A4-3079-49A8-9B91-06563AF0F18B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-1. Iterator", "03-1. Iterator\03-1. Iterator.csproj", "{05E3324D-AD5A-40C9-950E-21AC39C8DCF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-1. Iterator", "03-1. Iterator\03-1. Iterator.csproj", "{05E3324D-AD5A-40C9-950E-21AC39C8DCF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Stack", "04. Stack\04. Stack.csproj", "{6951D62E-A554-40E9-B9BF-4C48A7185F8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Stack", "04. Stack\04. Stack.csproj", "{6951D62E-A554-40E9-B9BF-4C48A7185F8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Queue", "05. Queue\05. Queue.csproj", "{563544C1-1B7A-47E5-81A5-235B7ABA2A86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Queue", "05. Queue\05. Queue.csproj", "{563544C1-1B7A-47E5-81A5-235B7ABA2A86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-1. CSharp Stack 05-1. CSharp Queue", "04-1. CSharp Stack 05-1. Queue\04-1. CSharp Stack 05-1. CSharp Queue.csproj", "{78E2C686-99CF-45C8-ADDE-0C4D82C2C3FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-1. Stack 05-1. Queue", "04-1. CSharp Stack 05-1. Queue\04-1. Stack 05-1. Queue.csproj", "{78E2C686-99CF-45C8-ADDE-0C4D82C2C3FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
