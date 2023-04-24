@@ -8,8 +8,6 @@ using System.Xml.Linq;
 
 namespace DataStructure
 {
-    
-
     internal class PriorityQueue<TElement, TPriority>
     {
         private struct Node
@@ -62,8 +60,7 @@ namespace DataStructure
                 {
                     break;
                 }
-            }
-            
+            }           
         }
 
         public TElement Dequeue()
