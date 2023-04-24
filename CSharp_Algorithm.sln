@@ -21,11 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Stack", "04. Stack\04. 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Queue", "05. Queue\05. Queue.csproj", "{563544C1-1B7A-47E5-81A5-235B7ABA2A86}"
 EndProject
-<<<<<<< HEAD
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-1. Stack 05-1. Queue", "..\..\..\04-1. CSharp Stack 05-1. Queue\04-1. Stack 05-1. Queue.csproj", "{2E0746C6-519A-49AF-B6B2-9C8F74AB27B1}"
-=======
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-1. Stack 05-1. Queue", "04-1. CSharp Stack 05-1. Queue\04-1. Stack 05-1. Queue.csproj", "{78E2C686-99CF-45C8-ADDE-0C4D82C2C3FA}"
->>>>>>> feat/Study
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
