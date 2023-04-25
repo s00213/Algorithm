@@ -41,16 +41,6 @@
         // * 후위 순회
         // : 왼쪽, 오른쪽, 노드
 
-
-
-
-
-
-
-
-
-
-
         static void Main(string[] args)
         {           
         }
