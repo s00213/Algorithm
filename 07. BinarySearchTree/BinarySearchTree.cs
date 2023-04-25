@@ -18,7 +18,7 @@ namespace DataStructure
         // 추가
         public void Add(T item)
         {
-            Node newNode = new Node(item, null, null, null);
+            Node newNode = new Node(item, null, null, null); // 새로운 node를 찾아서
 
             if (root == null)
             {
@@ -40,7 +40,7 @@ namespace DataStructure
                     // 비교 노드가 왼쪽 자식이 없는 경우
                     else 
                     { 
-                        // 그 자리가 지금추가가 될 자리
+                        // 그 자리가 지금 추가가 될 자리
                         current.left = newNode;
                         newNode.parent = current;
                         return;
@@ -60,12 +60,15 @@ namespace DataStructure
                     else 
                     { 
                         // 그 자리가 지금 추가가 될 자리
+                        // -> 그 자리가 비어있음
+                        // -> 왼쪽과 오른쪽에 추가 작업
                         current.right = newNode;
                         newNode.parent = current;
                         return;
                     }
                 }
                 // 동일한 데이터가 들어온 경우
+                // -> 허용하지 않음 
                 else
                 {
                     // 아무것도 안함
@@ -74,7 +77,7 @@ namespace DataStructure
             }
         }
 
-        // 제거 
+        // 삭제
         public bool Remove(T item) 
         { 
             Node findnode = FindNode(item);
@@ -110,26 +113,24 @@ namespace DataStructure
         private Node FindNode(T item)
         { 
             if (root == null) // 이진 탐색트리가 비어있는 경우
-            {
                 return null;
-            }
 
             Node current = root;
             while (current != null)
             {
-                // 현재 노드의 값이 찾고자 하는 값보다 작은 경우
+                // 현재 값이 노드의 값보다 더 작은 경우
                 if (item.CompareTo(current.item) < 0)
                 {
                     // 왼쪽 자식부터 다시 찾기 시작
                     current = current.left;
                 }
-                // 현재 노드의 값이 찾고자 하는 값보다 큰 경우
+                // 현재 값이 노드의 값보다 더 큰 경우
                 else if (item.CompareTo(current.item) > 0)
                 { 
                     // 오른쪽 자식부터 다시 찾기 시작
                     current = current.right;
                 }
-                // 현재 노드의 값이 찾고자 하는 값이랑 같은 경우
+                // 현재값이 노드의 값과 같은 경우
                 else
                 {
                     // 찾음
@@ -140,10 +141,11 @@ namespace DataStructure
             return null;
         }
 
-        // 제거 Remove의 ErageNode
+        // 삭제 Remove의 ErageNode
         private void ErageNode(Node node)
         {
             // 1. 자식 노드가 없는 노드일 경우
+            // -> 그냥 지워주면 됨
             if (node.HasNoChild)
             {
                 if (node.IsLeftChild)
@@ -154,6 +156,7 @@ namespace DataStructure
                     root = null;
             }
             // 2. 자식노드가 1개인 노드일 경우
+            // -> 부모 노드와 자식 노드를 이어줌
             else if (node.HasLeftChild || node.HasRightChild )
             {
                 Node parent = node.parent;
