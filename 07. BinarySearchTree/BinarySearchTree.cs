@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _07._BinarySearchTree
+namespace DataStructure
 {
     internal class BinarySearchTree<T> where T : IComparable<T>
     {
@@ -199,6 +199,17 @@ namespace _07._BinarySearchTree
                 
                 -> 둘 중에 1개 쓰면 됨*/
             }
+        }
+        public void Print()
+        {
+            Print(root);
+        }
+
+            public void Print(Node node)
+        {
+            if (node.left != null) Print(node.left);
+            Console.WriteLine(node.item);
+            if (node.right != null) Print(node.right);
         }
 
         public class Node

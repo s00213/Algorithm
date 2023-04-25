@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 
-namespace _07._BinarySearchTree
+namespace DataStructure
 {
     internal class Program
     {
@@ -26,14 +26,28 @@ namespace _07._BinarySearchTree
         // <이진탐색트리의 시간복잡도>
         // 접근			탐색	★		삽입			삭제
         // O(log n)		O(log n)	O(log n)	O(log n)
+        // -> 굉장한 효율을 보여주는 자료 구조
 
         // <이진탐색트리의 주의점>
         // 이진탐색트리의 노드들이 한쪽 자식으로만 추가되는 불균형 발생 가능
         // 이 경우 탐색영역이 절반으로 줄여지지 않기 때문에 시간복잡도 증가
         // 이러한 현상을 막기 위해 자가균형기능을 추가한 트리의 사용이 일반적
-        // 대표적인 방식으로 Red-Black Tree, AVL Tree 등이 있음
+        // -> 좌회전과 우회전을 통해서 불균형 문제를 해결함
+        // 대표적인 방식으로 Red-Black Tree(C#), AVL Tree 등이 있음
 
-        void Monster()
+        // Red-Black Tree(C#)
+        // 모든 노드는 빨간색 아니면 검은색이다.
+        // 루트 노드는 검은색이다.
+        // 잎 노드는 검은색이다.
+        // 빨간 노드의 자식들은 모두 검은색이다. 하지만 검은색 노드의 자식 이 빨간색 일 필요는 없다.
+        // 루트 노드에서 모든 잎 노드 사이에 있는 검은색 노드의 수는 모두 동일하다.
+
+        // <트리기반의 자료구조의 순회>
+        // 1. 전위순회 : 노드, 왼쪽, 오른쪽
+        // 2. 중위순회 : 왼쪽, 노드, 오른쪽    <- 이진탐색트리의 순회 : 오름차순 정렬
+        // 3. 후위순회 : 왼쪽, 오른쪽, 노드
+
+        void Test()
         {
             // value 이진탐색트리 -> 장렬이 보장되어 있는 자료 구조
             SortedSet<int> sortedSet = new SortedSet<int>();
@@ -67,7 +81,6 @@ namespace _07._BinarySearchTree
 
             sortedDic.Remove("리아코");
 
-
             // 이진탐색 검색효율
             int[] array = new int[10000000];
             SortedSet<int> set = new SortedSet<int>();
@@ -96,16 +109,27 @@ namespace _07._BinarySearchTree
             stopwatch.Stop();
             Console.WriteLine("트리 time : {0}", stopwatch.ElapsedTicks);
         }
-    
+
+        internal class Monster
+        {
+            public string name;
+            public int hp;
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+            DataStructure.BinarySearchTree<int> bst = new DataStructure.BinarySearchTree<int>();
 
-    internal class Monster
-    {
-         public string name;
-         public int hp;
+            bst.Add(3);
+            bst.Add(1);
+            bst.Add(5);
+            bst.Add(4);
+            bst.Add(9);
+            bst.Add(7);
+            bst.Add(6);
+            bst.Add(2);
+
+            bst.Print();
+        }       
     }
 }

@@ -21,15 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Stack", "04. Stack\04. 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Queue", "05. Queue\05. Queue.csproj", "{563544C1-1B7A-47E5-81A5-235B7ABA2A86}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-1. Stack 05-1. Queue", "04-1. CSharp Stack 05-1. Queue\04-1. Stack 05-1. Queue.csproj", "{6B4BF1D9-AD24-45CF-B9E3-28D3C49A6D7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-1. Stack 05-1. Queue Study", "04-1. CSharp Stack 05-1. Queue\04-1. Stack 05-1. Queue Study.csproj", "{6B4BF1D9-AD24-45CF-B9E3-28D3C49A6D7B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Heap", "06. Heap\06. Heap.csproj", "{00611A0E-5938-4478-98A5-B58A21D3B79B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-1. Heap", "06-1. Heap\06-1. Heap.csproj", "{2FBC07B0-8113-4F84-97EF-B3A29DC73D6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-1. Heap Study", "06-1. Heap\06-1. Heap Study.csproj", "{2FBC07B0-8113-4F84-97EF-B3A29DC73D6E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. BinarySearchTree", "07. BinarySearchTree\07. BinarySearchTree.csproj", "{A613DA64-E347-489D-8475-899BDA8E9A26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-1. BinarySearchTree", "07-1. BinarySearchTree\07-1. BinarySearchTree.csproj", "{0AEA674A-AA64-47F5-A105-42B570364CE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-1. BinarySearchTree Study", "07-1. BinarySearchTree\07-1. BinarySearchTree Study.csproj", "{0AEA674A-AA64-47F5-A105-42B570364CE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
