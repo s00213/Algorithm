@@ -230,6 +230,7 @@ namespace DataStructure
                 this.right = right;
             }
 
+            // 속성을 쓰는 이유: 함수 만들어줌
             public bool IsRootNode { get { return parent == null; } }
             public bool IsLeftChild { get { return parent != null && parent.left == this; } }
             public bool IsRightChild { get { return parent != null && parent.right == this; } }
