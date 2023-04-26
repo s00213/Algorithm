@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// 1. Dictionary 구현
 namespace DataStructure
 {
     // 똑같은지 비교할 수 있는 인터페이스 사용하여 제약조건을 걸어둠
-    public class Dictionary<TKey, TValue> where TKey : IEquatable<TKey> 
+    public class Dictionary<TKey, TValue> where TKey : IEquatable<TKey>
     {
         // DefaultCapacity 값을 최대로 지정
-        private const int DefaultCapacity = 1000; 
+        private const int DefaultCapacity = 1000;
 
         // 데이터를 저장할 땐 키값과 데이터 둘 다 저장하면 여러 용도로 사용가능함
         private struct Entry
@@ -53,12 +54,12 @@ namespace DataStructure
                     }
 
                     // 3-3. 다음 index로 이동
-                    index = index % table.Length;                   
+                    index = index % table.Length;
                 }
 
                 throw new KeyNotFoundException();
             }
-            set            
+            set
             {
                 // 1. key를 index로 해싱
                 int index = Math.Abs(key.GetHashCode() % table.Length);
@@ -70,7 +71,7 @@ namespace DataStructure
                     if (key.Equals(table[index].key))
                     {
                         table[index].value = value;
-                        return ;
+                        return;
                     }
                     if (table[index].state == Entry.State.None)
                     {
@@ -103,7 +104,7 @@ namespace DataStructure
                 }
 
                 // 3-2. 다음 index로 이동
-                index = index < table.Length -1 ? index +1 : 0;              
+                index = index < table.Length - 1 ? index + 1 : 0;
             }
 
             // 3. 사용중이 아닌 index를 발견한 경우 그 위치에 저장
@@ -123,7 +124,7 @@ namespace DataStructure
             while (true)
             {
                 // table[index].state == Entry.State.Using
-            
+
                 // 3-1. 동일한 키 값을 찾았을 때 지운 상태로 표시
                 if (key.Equals(table[index].key))
                 {
