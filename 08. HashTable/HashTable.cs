@@ -92,7 +92,7 @@ namespace DataStructure
             // GetHashCode는 램덤 방지를 위해 SHA-1 방식을 사용함 
             int index = Math.Abs(key.GetHashCode() % table.Length); // 테이블 크기로 나머지 연산, 음수 나올 수 있기 때문에 절대값으로 계산
 
-            // 2. 사용중이 아닌 index까지다음으로 이동
+            // 2. 사용중이 아닌 index까지 다음으로 이동
             while (table[index].state == Entry.State.Using)  // 그 위치가 이미 사용중이었음 -> 충돌
             {
                 // 3-1. 동일한 키값을 찾았을 때 오류 
