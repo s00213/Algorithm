@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Text; // StringBuilder를 사용하기 위해서 기재함
 
-namespace CodingTestPractice
-{
+namespace Hanoi
+{ 
     class Program
     {
-        StringBuilder sb = new StringBuilder();
+        static StringBuilder sb = new StringBuilder();
 
         static void HanoiTower(int n, int a, int b, int c)
         {
@@ -15,7 +15,7 @@ namespace CodingTestPractice
                 return;
             }
 
-            HanoiTower(n - 1, a, c, b);
+            HanoiTower(n-1, a, c, b);
             HanoiTower(1, a, b, c);
             HanoiTower(-1, b, a, c);
         }
