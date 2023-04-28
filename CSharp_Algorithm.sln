@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08-1. HashTable Study", "08
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. DesignTechnique", "09. DesignTechnique\09. DesignTechnique.csproj", "{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. DesignTechnique Study", "09. DesignTechnique Study\09. DesignTechnique Study.csproj", "{A54DC5F8-C51C-4B01-88F2-1FEF4742EC46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-1. DesignTechnique Study", "09. DesignTechnique Study\09-1. DesignTechnique Study.csproj", "{A54DC5F8-C51C-4B01-88F2-1FEF4742EC46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
