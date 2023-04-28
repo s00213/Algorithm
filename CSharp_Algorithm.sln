@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08-1. HashTable Study", "08
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. DesignTechnique", "09. DesignTechnique\09. DesignTechnique.csproj", "{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-1. DesignTechnique Study", "09. DesignTechnique Study\09-1. DesignTechnique Study.csproj", "{A54DC5F8-C51C-4B01-88F2-1FEF4742EC46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09-1. DesignTechnique Study", "09-1. DesignTechnique Study\09-1. DesignTechnique Study.csproj", "{256F7991-52BF-4D57-826E-61328329AE6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,10 +113,10 @@ Global
 		{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A54DC5F8-C51C-4B01-88F2-1FEF4742EC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A54DC5F8-C51C-4B01-88F2-1FEF4742EC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A54DC5F8-C51C-4B01-88F2-1FEF4742EC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A54DC5F8-C51C-4B01-88F2-1FEF4742EC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{256F7991-52BF-4D57-826E-61328329AE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256F7991-52BF-4D57-826E-61328329AE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256F7991-52BF-4D57-826E-61328329AE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256F7991-52BF-4D57-826E-61328329AE6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
