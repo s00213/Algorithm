@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. LinkedList", "02. Linke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Iterator", "03. Iterator\03. Iterator.csproj", "{FA5562A4-3079-49A8-9B91-06563AF0F18B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-1. Iterator Study", "03-1. Iterator\03-1. Iterator Study.csproj", "{05E3324D-AD5A-40C9-950E-21AC39C8DCF8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Stack", "04. Stack\04. Stack.csproj", "{6951D62E-A554-40E9-B9BF-4C48A7185F8A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Queue", "05. Queue\05. Queue.csproj", "{563544C1-1B7A-47E5-81A5-235B7ABA2A86}"
@@ -22,8 +20,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. BinarySearchTree", "07. BinarySearchTree\07. BinarySearchTree.csproj", "{A613DA64-E347-489D-8475-899BDA8E9A26}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. HashTable", "08. HashTable\08. HashTable.csproj", "{A58F4F94-6BAE-4B61-9EEE-9FA561EFAD0E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08-1. HashTable Study", "08-1. HashTable\08-1. HashTable Study.csproj", "{93BA053B-CED4-40C2-AFD6-5B21A03D8C55}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. DesignTechnique", "09. DesignTechnique\09. DesignTechnique.csproj", "{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}"
 EndProject
@@ -36,6 +32,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-1. Stack 05-1. Queue Study", "04-1. CSharp Stack 05-1. Queue Study\04-1. Stack 05-1. Queue Study.csproj", "{827B3B88-22DF-4CF0-AC85-99265C78A179}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-1. Heap Study", "06-1. Heap Study\06-1. Heap Study.csproj", "{7D4A2819-8336-44CE-A3A0-DB241E132D81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-1. Iterator Study", "03-1. Iterator\03-1. Iterator Study.csproj", "{98CE7AAA-154D-4061-AE6A-8F7AC161314C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08-1. HashTable Study", "08-1. HashTable\08-1. HashTable Study.csproj", "{79B4E36A-C0A1-472E-A199-B8BA9D16BE52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,6 @@ Global
 		{FA5562A4-3079-49A8-9B91-06563AF0F18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA5562A4-3079-49A8-9B91-06563AF0F18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA5562A4-3079-49A8-9B91-06563AF0F18B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05E3324D-AD5A-40C9-950E-21AC39C8DCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05E3324D-AD5A-40C9-950E-21AC39C8DCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05E3324D-AD5A-40C9-950E-21AC39C8DCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05E3324D-AD5A-40C9-950E-21AC39C8DCF8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6951D62E-A554-40E9-B9BF-4C48A7185F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6951D62E-A554-40E9-B9BF-4C48A7185F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6951D62E-A554-40E9-B9BF-4C48A7185F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -83,10 +79,6 @@ Global
 		{A58F4F94-6BAE-4B61-9EEE-9FA561EFAD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A58F4F94-6BAE-4B61-9EEE-9FA561EFAD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A58F4F94-6BAE-4B61-9EEE-9FA561EFAD0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93BA053B-CED4-40C2-AFD6-5B21A03D8C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93BA053B-CED4-40C2-AFD6-5B21A03D8C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93BA053B-CED4-40C2-AFD6-5B21A03D8C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93BA053B-CED4-40C2-AFD6-5B21A03D8C55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D09417B9-D6BD-4B6C-8748-DEA3D38496B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -111,6 +103,14 @@ Global
 		{7D4A2819-8336-44CE-A3A0-DB241E132D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D4A2819-8336-44CE-A3A0-DB241E132D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D4A2819-8336-44CE-A3A0-DB241E132D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CE7AAA-154D-4061-AE6A-8F7AC161314C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CE7AAA-154D-4061-AE6A-8F7AC161314C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CE7AAA-154D-4061-AE6A-8F7AC161314C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CE7AAA-154D-4061-AE6A-8F7AC161314C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B4E36A-C0A1-472E-A199-B8BA9D16BE52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B4E36A-C0A1-472E-A199-B8BA9D16BE52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B4E36A-C0A1-472E-A199-B8BA9D16BE52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B4E36A-C0A1-472E-A199-B8BA9D16BE52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
