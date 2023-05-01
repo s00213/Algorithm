@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace _10._Sorting
 {
+    /* 안정 정렬
+    * 중복된 값을 입력 순서와 동일하게 정렬함
+    * : 중복된 값을 입력 순서와 동일하게 정렬
+    * -> 기존의 다른 요소로 정렬이 된 입력값을 정렬을 할 때 기존의 정렬 형태를 유지한 상태에서 정렬을 한다는 의미와 같음*/
+
+    /* 불안정 정렬
+     * : 중복된 값을 입력 순서와 상관없이 무작위로 뒤섞인 상태에서 정렬
+     * -> 불안정 정렬의 경우 중복된 값을 입력 순서와 상관없이 무작위로 뒤섞인 상태에서 정렬함*/
+
     internal class Sort
     {
         /******************************************************
@@ -18,6 +27,11 @@ namespace _10._Sorting
 
         // <선택 정렬(Selection Sort)>
         // 데이터 중 가장 작은 값부터 하나씩 선택하여 정렬
+        // * 불안정 정렬 알고리즘
+        // 최선 시간복잡도 : O(n^)
+        // 평균 시간복잡도 : O(n^)
+        // 최악 시간복잡도 : O(n^)
+
         public static void SelectionSort(IList<int> list)
         {
             for (int i = 0; i < list.Count; i++)
@@ -34,6 +48,10 @@ namespace _10._Sorting
 
         // <삽입 정렬(Insertion Sort)>
         // 데이터를 하나씩 꺼내어 정렬된 자료 중 적합한 위치에 삽입하여 정렬
+        // 최선 시간복잡도 : O(n)
+        // 평균 시간복잡도 : O(n^)
+        // 최악 시간복잡도 : O(n^)
+
         public static void InsertionSort(IList<int> list)
         {
             for (int i = 1; i < list.Count; i++)
@@ -50,6 +68,10 @@ namespace _10._Sorting
 
         // <버블 정렬(Bubble Sort)>
         // 서로 인접한 데이터를 비교하여 정렬
+        // 최선 시간복잡도 : O(n)
+        // 평균 시간복잡도 : O(n^) 
+        // 최악 시간복잡도 : O(n^)
+
         public static void BubbleSort(IList<int> list)
         {
             for (int i = 0; i < list.Count; i++)
@@ -72,7 +94,7 @@ namespace _10._Sorting
 
         // <힙정렬(Heap Sort)>
         // 힙을 이용하여 우선순위가 가장 높은 요소부터 가져와 정렬
-        // 깨지는 정렬로 불안정 정렬
+        // 불안정 정렬
         public static void HeapSort(IList<int> list)
         {
             PriorityQueue<int, int> pq = new PriorityQueue<int, int>();
@@ -92,6 +114,12 @@ namespace _10._Sorting
         // 데이터를 2분할하여 정렬 후 합병
         // 특징 상 큰 데이터를 2분할 시 2분할 된 데이터를 저장할 공간이 필요함
         // -> 다른 정렬과 다르게 메모리에 부담이 되는 정렬임
+        // 안정 정렬
+        // 최선 시간복잡도 : O(nlogn)
+        // 평균 시간복잡도 : O(nlogn)
+        // 최악 시간복잡도 : O(nlogn)
+        // 메모리 : n
+
         public static void MergeSort(IList<int> list, int left, int right)
         {
             if (left == right) return;
