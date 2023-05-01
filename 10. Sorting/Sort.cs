@@ -120,6 +120,7 @@ namespace _10._Sorting
         // 최악 시간복잡도 : O(nlogn)
         // 메모리 : n
 
+
         public static void MergeSort(IList<int> list, int left, int right)
         {
             if (left == right) return;
