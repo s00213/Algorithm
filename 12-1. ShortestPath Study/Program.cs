@@ -1,8 +1,9 @@
-﻿namespace _12_1._ShortestPath_Study;
-class Program
+﻿namespace _12_1._ShortestPath_Study
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        { 
+        }
     }
 }
