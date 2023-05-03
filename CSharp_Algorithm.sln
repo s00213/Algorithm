@@ -47,7 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12. ShortestPath", "12. Sho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12-1. ShortestPath Study", "12-1. ShortestPath Study\12-1. ShortestPath Study.csproj", "{7BC1A290-47FF-47A7-A7F7-370345340AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. PathFinding", "13. PathFinding\13. PathFinding.csproj", "{95744576-8B55-4B50-8FA7-61224C561D76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13. PathFinding", "13. PathFinding\13. PathFinding.csproj", "{95744576-8B55-4B50-8FA7-61224C561D76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13-1. PathFinding Study", "13-1. PathFinding Study\13-1. PathFinding Study.csproj", "{A33DF706-A2C7-4AA2-8C66-5E1922F6DEB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,10 @@ Global
 		{95744576-8B55-4B50-8FA7-61224C561D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95744576-8B55-4B50-8FA7-61224C561D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95744576-8B55-4B50-8FA7-61224C561D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A33DF706-A2C7-4AA2-8C66-5E1922F6DEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A33DF706-A2C7-4AA2-8C66-5E1922F6DEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A33DF706-A2C7-4AA2-8C66-5E1922F6DEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A33DF706-A2C7-4AA2-8C66-5E1922F6DEB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
