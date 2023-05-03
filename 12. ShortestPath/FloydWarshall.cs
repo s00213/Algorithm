@@ -27,8 +27,8 @@ namespace _12._ShortestPath
                 for (int x = 0; x < count; x++)
                 {
                     costTable[y, x] = graph[y, x];
-                    pathTable[y, x] = (graph[start, i] < INF);
-                }
+					pathTable[y, x] = -1;
+				}
             }
 
             for (int middle = 0; middle < count; middle++)
